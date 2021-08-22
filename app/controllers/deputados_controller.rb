@@ -11,6 +11,7 @@ class DeputadosController < ApplicationController
     deputado(params[:id])
     despesas(params[:id])
     totalgasto
+
   end
 
   private
@@ -24,5 +25,6 @@ class DeputadosController < ApplicationController
 
   def despesas(id)
     @despesas = Despesa.where('deputado_id = ?',id)
+    @maiorgasto = @despesas.max_by { |i| i[:vlrLiquido] } [:vlrLiquido]
   end
 end

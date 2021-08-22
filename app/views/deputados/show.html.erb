@@ -39,12 +39,14 @@
 
     <tbody>
       <% @despesas.each do |d| %>
-        <tr>
-          <td><%= d.datEmissao %></td>
-          <td><%= d.txtFornecedor %></td>
-          <td><%= d.vlrLiquido %></td>
-          <td><%= link_to "Documento", d.urlDocumento , :target => "_blank" unless d.urlDocumento.nil? %></td>
-        </tr>
+        <% if d.vlrLiquido == @maiorgasto %>
+          <tr class="table-warning">
+        <% end %>
+            <td><%= d.datEmissao %></td>
+            <td><%= d.txtFornecedor %></td>
+            <td><%= d.vlrLiquido %></td>
+            <td><%= link_to "Documento", d.urlDocumento , :target => "_blank" unless d.urlDocumento.nil? %></td>
+          </tr>
       <% end %>
     </tbody>
   </table>
