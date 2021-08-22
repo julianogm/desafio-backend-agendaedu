@@ -1,0 +1,21 @@
+<h1>Bem Vindo</h1>
+
+<div>
+  Selecione uma opção 
+  <br>
+  <%= link_to 'Carregar Arquivo', carregar_path %><br>
+  <%= link_to 'Listar Deputados', deputado_path %>
+
+  <div class="dropdown">
+    <a class="dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      Listar Deputados por Estados
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="max-height: 280px; overflow-y: auto;">
+      <% ESTADOS.each do |estado| %>
+        <li class="dropdown-item">
+          <%= link_to estado.values.first, deputado_path(sgUF: estado.keys.first) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

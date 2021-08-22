@@ -1,0 +1,51 @@
+<h4>Detalhes do Deputado</h4>
+
+<table class="table container-sm">
+  <thead>
+    <%= image_tag "http://www.camara.leg.br/internet/deputado/bandep/#{@deputado.id}.jpg", :size => '150x200' %>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Total Gasto (R$)</th>
+      <th>N.º Carteira Parlamentar</th>
+      <th>UF</th>
+      <th>Partido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @deputado.txNomeParlamentar %></td>
+      <td><%= @deputado.cpf %></td>
+      <td class="fw-bold"><%= @totalgasto %></td>
+      <td><%= @deputado.nuCarteiraParlamentar %></td>
+      <td><%= @deputado.sgUF %></td>
+      <td><%= @deputado.sgPartido %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Despesas</h4>
+
+<div class="table-responsive container-md">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Fornecedor</th>
+        <th>Valor</th>
+        <th>Visualizar Documento</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @despesas.each do |d| %>
+        <tr>
+          <td><%= d.datEmissao %></td>
+          <td><%= d.txtFornecedor %></td>
+          <td><%= d.vlrLiquido %></td>
+          <td><%= link_to "Documento", d.urlDocumento , :target => "_blank" unless d.urlDocumento.nil? %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

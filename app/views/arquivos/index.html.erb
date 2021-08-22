@@ -1,0 +1,10 @@
+<h3>Carregar Arquivo</h3>
+
+<h4>Selecione um arquivo CSV para carregar...</h4>
+
+<%= form_with url: carregar_path, html: { multipart: true } do |f| %>
+  <%= f.file_field :import_file %>
+  <%= button_to 'Carregar Arquivo', action: 'import' %>
+<% end %>
+<br>
+<%= link_to 'Voltar', root_path %>

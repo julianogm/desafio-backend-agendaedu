@@ -1,0 +1,26 @@
+<h3>Deputados</h3>
+
+Clique no nome para mais detalhes
+<div class="table-responsive container-md">
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Estado</th>
+        <th>Partido</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @deputados.each do |d| %>
+        <tr>
+          <td><%= link_to d.txNomeParlamentar, despesas_deputado_path(id: d.id) %></td>
+          <td><%= d.cpf %></td>
+          <td><%= d.sgUF %></td>
+          <td><%= d.sgPartido %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
