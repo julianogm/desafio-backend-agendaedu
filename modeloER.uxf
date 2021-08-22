@@ -1,0 +1,63 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;516&lt;/x&gt;&lt;y&gt;90&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&amp;lt;&amp;lt;Stereotype&amp;gt;&amp;gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>116</x><y>314</y><w>200</w><h>150</h></coordinates><panel_attributes>Deputado
+--
+-idCadastro: integer
+-txNomeDeputado: string
+-cpf: string
+-numCarteiraParlamentar: integer
+-sgUF: string
+-sgPartido: string
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>144</y><w>110</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=1..n
+m2=0
+  &lt;pertence a&gt;</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>84</y><w>150</w><h>70</h></coordinates><panel_attributes>Legislatura
+--
+-codLegislatura: integer
+-numLegislatura: integer </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>624</y><w>220</w><h>80</h></coordinates><panel_attributes>DadosViagem
+--
+-txtPassageiro: text
+-txtTrecho: text
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>60</y><w>220</w><h>110</h></coordinates><panel_attributes>TipoDespesa
+--
+-numSubCota: integer
+-txtDescricao: string
+-numEspecificacaoSubCota: integer
+-txtDescricaoEspecificacao: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>250</y><w>220</w><h>280</h></coordinates><panel_attributes>Despesa
+--
+-txtFornecedor: string
+-txtCPFCNPJ: string
+-txtNumero: text
+-indTipoDocumento: string
+-datEmissao: datetime
+-vlrDocumento: decimal
+-vlrGlosa: decimal
+-vlrLiquido: decimal
+-numMes: integer
+-numAno: integer
+-numParcela: integer
+-numLote: integer
+-numRessarcimento: integer
+-vlrRestituicao: integer
+-numDeputadoId: integer
+-urlDocumento: text</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>160</y><w>40</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=0
+m2=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>520</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..1</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>370</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element></diagram>
