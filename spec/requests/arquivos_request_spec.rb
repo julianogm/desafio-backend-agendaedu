@@ -15,8 +15,8 @@ RSpec.describe 'arquivos requests', type: :request do
     
     describe '#import' do
       it 'carrega o arquivo' do
-        post carregar_path , params: { import_file: file_fixture('arquivo.csv') }
-        expect(response).to redirect_to(root_path)
+        post carregar_path , params: { import_file: file }
+        expect(response).to redirect_to(carregar_path)
       end
     end
   end

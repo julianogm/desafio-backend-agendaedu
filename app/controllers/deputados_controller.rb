@@ -25,6 +25,7 @@ class DeputadosController < ApplicationController
 
   def despesas(id)
     @despesas = Despesa.where('deputado_id = ?',id)
-    @maiorgasto = @despesas.max_by { |i| i[:vlrLiquido] } [:vlrLiquido]
+    #@maiorgasto = @despesas.max_by { |i| i[:vlrLiquido] } [:vlrLiquido]
+    @maiorgasto = Despesa.where('deputado_id = ?',id).maximum('vlrLiquido')
   end
 end

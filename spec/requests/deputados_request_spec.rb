@@ -3,6 +3,7 @@ RSpec.describe 'deputados requests', type: :request do
   describe 'controller methods' do
     let(:legislatura) { FactoryBot.create :legislatura }
     let(:deputado) { FactoryBot.create :deputado, legislatura: legislatura }
+    let(:despesa) { FactoryBot.create :despesa, deputado: deputado }
     
     describe '#index' do
       it 'retorna status 200 para todos os deputados' do

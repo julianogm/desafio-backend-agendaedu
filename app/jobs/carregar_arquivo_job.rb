@@ -7,6 +7,7 @@ class CarregarArquivoJob < ApplicationJob
     store_data(filepath)
   end
 
+  private
   def store_data(filepath)
     list_legislaturas = []
     list_tipodespesas = []
